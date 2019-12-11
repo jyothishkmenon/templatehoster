@@ -35,7 +35,7 @@ app.get('/test', function (req, res, next) {
 });
 
 app.post('/adroit/template/:name', function (req, res, next) {
-    const name = lodash.get(req.params.name || '').toLowerCase();
+    const name = lodash.get(req.params, 'name', '').toLowerCase();
     templates[name] = req.body;
     res.status(200).json({code: "success"});
 });
@@ -57,20 +57,20 @@ app.post('/adroit/templates/add', function (req, res, next) {
 });
 
 app.get('/adroit/template/mobile/:name', function (req, res, next) {
-    const name = lodash.get(req.params.name || '').toLowerCase();
-    const result = lodash.get(mobileTemplates, name, lodash.get(templates, name));
+    const name = lodash.get(req.params, 'name',  '').toLowerCase();
+    const result = lodash.get(mobileTemplates, name, lodash.get(templates, name, {}));
     res.status(200).json(result);
 
 });
 app.get('/adroit/template/web/:name', function (req, res, next) {
-    const name = lodash.get(req.params.name || '').toLowerCase();
+    const name = lodash.get(req.params, 'name', '').toLowerCase();
     const result = lodash.get(webTemplates, name, lodash.get(templates, name));
     res.status(200).json(result);
 
 });
 
 app.get('/adroit/template/:name', function (req, res, next) {
-    const name = lodash.get(req.params.name || '').toLowerCase();
+    const name = lodash.get(req.params, 'name', '').toLowerCase();
     res.status(200).json(templates[name] || {});
 });
 
