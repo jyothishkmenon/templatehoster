@@ -9,3 +9,10 @@ app.get('/', function (req, res, next) {
     const query = req.query;
     res.status(200).send(JSON.stringify({ code: "success" }));
 });
+
+const port  =process.env.PORT || 3000
+app.listen(port, function(){
+    console.log("listening on ", port);
+});
+app.on('error', console.error);
+app.on('listening', console.log);
