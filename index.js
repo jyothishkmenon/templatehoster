@@ -46,20 +46,20 @@ app.post('/adroit/templates/add', function (req, res, next) {
     const mobtemplate = lodash.get(req.body, 'form.androidForm');
     const webtemplate = lodash.get(req.body, 'form.webForm');
     if (mobtemplate) {
-        mobileTemplates[templateName]=mobtemplate;
+        mobileTemplates[templateName] = mobtemplate;
         // fs.writeFileSync(path.join(mobFilesPath, templateName+'.json'), JSON.stringify(mobtemplate, null, 2));
     }
-    if (webtemplate){
-        webTemplates[templateName]=webtemplate;
+    if (webtemplate) {
+        webTemplates[templateName] = webtemplate;
         // fs.writeFileSync(path.join(webFilesPath, templateName+'.json'), JSON.stringify(webtemplate, null, 2));
     }
     res.status(200).json({code: "success"});
 });
 
 app.get('/adroit/template/mobile/:name', function (req, res, next) {
-    const name = lodash.get(req.params, 'name',  '').toLowerCase();
+    const name = lodash.get(req.params, 'name', '').toLowerCase();
     const result = lodash.get(mobileTemplates, name, lodash.get(templates, name, {}));
-    res.status(200).json(result);
+    res.status(200).json({templateResponse: result});
 
 });
 app.get('/adroit/template/web/:name', function (req, res, next) {
