@@ -35,12 +35,13 @@ app.get('/test', function (req, res, next) {
 });
 
 app.post('/adroit/template/:name', function (req, res, next) {
-    templates[req.params.name] = req.body;
+    const name = lodash.get(req.params.name || '').toLowerCase();
+    templates[name] = req.body;
     res.status(200).json({code: "success"});
 });
 
 app.post('/adroit/templates/add', function (req, res, next) {
-    const templateName = lodash.get(req.body, 'formName', req.query.name);
+    const templateName = lodash.get(req.body, 'formName', req.query.name || '').toLowerCase();
     templates[templateName] = req.body;
     const mobtemplate = lodash.get(req.body, 'form.androidForm');
     const webtemplate = lodash.get(req.body, 'form.webForm');
@@ -56,20 +57,21 @@ app.post('/adroit/templates/add', function (req, res, next) {
 });
 
 app.get('/adroit/template/mobile/:name', function (req, res, next) {
-    const name = req.params.name;
+    const name = lodash.get(req.params.name || '').toLowerCase();
     const result = lodash.get(mobileTemplates, name, lodash.get(templates, name));
     res.status(200).json(result);
 
 });
 app.get('/adroit/template/web/:name', function (req, res, next) {
-    const name = req.params.name;
+    const name = lodash.get(req.params.name || '').toLowerCase();
     const result = lodash.get(webTemplates, name, lodash.get(templates, name));
     res.status(200).json(result);
 
 });
 
 app.get('/adroit/template/:name', function (req, res, next) {
-    res.status(200).json(templates[req.params.name] || {});
+    const name = lodash.get(req.params.name || '').toLowerCase();
+    res.status(200).json(templates[name] || {});
 });
 
 
