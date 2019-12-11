@@ -2,14 +2,29 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
+const lodash = require('lodash');
 const app = express();
+const fs = require('fs');
 
 app.use(bodyParser.json());
 app.use(logger('dev'));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({extended: false}));
+const mobFilesPath = path.join(__dirname, 'public', 'files', 'mobile');
+const webFilesPath = path.join(__dirname, 'public', 'files', 'web');
+if (!fs.existsSync(mobFilesPath)){
+    fs.mkdirSync(mobFilesPath);
+}
+if (!fs.existsSync(webFilesPath)){
+    fs.mkdirSync(webFilesPath);
+}
 
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors());
+
+const mobileTemplates = {};
+const webTemplates = {};
 const templates = {};
 
 app.get('/test', function (req, res, next) {
@@ -21,6 +36,21 @@ app.post('/adroit/template/:name', function (req, res, next) {
     templates[req.params.name] = req.body;
     res.status(200).json({code: "success"});
 });
+
+app.post('/adroit/templates/add', function (req, res, next) {
+    const templateName = lodash.get(req.body, 'formName', req.query.name);
+    templates[templateName] = req.body;
+    const mobtemplate = lodash.get(req.body, 'form.androidForm');
+    const webtemplate = lodash.get(req.body, 'form.webForm');
+    if (mobtemplate) {
+        fs.writeFileSync(path.join(mobFilesPath, templateName+'.json'), JSON.stringify(mobtemplate, null, 2));
+    }
+    if (webtemplate){
+        fs.writeFileSync(path.join(webFilesPath, templateName+'.json'), JSON.stringify(webtemplate, null, 2));
+    }
+    res.status(200).json({code: "success"});
+});
+
 
 app.get('/adroit/template/:name', function (req, res, next) {
     res.status(200).json(templates[req.params.name] || {});
