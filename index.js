@@ -51,6 +51,12 @@ app.post('/adroit/templates/add', function (req, res, next) {
     res.status(200).json({code: "success"});
 });
 
+app.get('/adroit/template/mobile/:name', function (req, res, next) {
+    const name = req.params.name;
+    const result = lodash.get(mobileTemplates, name, lodash.get(templates, name));
+    res.status(200).json(result);
+
+});
 
 app.get('/adroit/template/:name', function (req, res, next) {
     res.status(200).json(templates[req.params.name] || {});
