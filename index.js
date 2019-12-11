@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 
 app.get('/', function (req, res, next) {
     const query = req.query;
-    res.status(200).send(JSON.stringify({ code: "success" }));
+    res.status(200).json({ code: "success" });
 });
 
 const port  =process.env.PORT || 3000
