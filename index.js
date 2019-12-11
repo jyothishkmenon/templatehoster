@@ -63,9 +63,16 @@ app.post('/adroit/templates/add', function (req, res, next) {
 app.get('/adroit/template/mobile/:name', function (req, res, next) {
     const name = lodash.get(req.params, 'name', '').toLowerCase();
     const result = lodash.get(mobileTemplates, name, lodash.get(templates, name, {}));
+    res.status(200).json({templateResponse: result});
+
+});
+app.get('/adroit/template/mobiledata/:name', function (req, res, next) {
+    const name = lodash.get(req.params, 'name', '').toLowerCase();
+    const result = lodash.get(mobileTemplates, name, lodash.get(templates, name, {}));
     res.status(200).json({templateResponse: result, dataMappings:defaultMobileData});
 
 });
+
 app.get('/adroit/template/web/:name', function (req, res, next) {
     const name = lodash.get(req.params, 'name', '').toLowerCase();
     const result = lodash.get(webTemplates, name, lodash.get(templates, name));
