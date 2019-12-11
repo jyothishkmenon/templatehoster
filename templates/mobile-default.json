@@ -1,0 +1,2486 @@
+{
+  "name": "native_ssn_cip_3pages",
+  "initial_screen": "intro_screen",
+  "screens": [
+    {
+      "name": "intro_screen",
+      "metadata": {
+        "navigations": [
+          "back"
+        ],
+        "required": true
+      },
+      "elements": [
+        {
+          "name": "footer",
+          "type": "ELEMENT_GROUP",
+          "widget": {
+            "type": "footer",
+            "content": null,
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": [
+            {
+              "name": "get_started_btn",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "action_btn",
+                "content": "Get Started",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "font": "mdBig14",
+                "margin": "0 0 0 0",
+                "size": "h:48",
+                "background_color": "#0070BA",
+                "text_color": "#FFFFFF"
+              },
+              "actions": [
+                {
+                  "trigger": "CLICK",
+                  "effects": [
+                    {
+                      "type": "NAVIGATE",
+                      "arguments": [
+                        "{\"next\": \"name_dob_screen\"}"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": null,
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "intro_section",
+          "type": "ELEMENT_GROUP",
+          "widget": null,
+          "elements": [
+            {
+              "name": "group_image",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "image",
+                "content": "group",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "margin": "0 128 0 0",
+                "size": "w:77,h:55",
+                "alignment": "center-horizontal"
+              },
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "group_title",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "text",
+                "content": "We'd like to confirm your identity. You'll only need to do this once.",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "font": "xlMedium",
+                "margin": "16 40 16 0",
+                "text_color": "#2C2E2F",
+                "alignment": "center-horizontal"
+              },
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "group_subtitle",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "text",
+                "content": "Providing this info helps us keep the PayPal community safe as well as comply with government regulations.",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "font": "smRegular",
+                "margin": "16 8 16 0",
+                "text_color": "#687173",
+                "alignment": "center-horizontal"
+              },
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": {
+            "alignment": "center-horizontal"
+          },
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        }
+      ],
+      "next": "name_dob_screen"
+    },
+    {
+      "name": "name_dob_screen",
+      "metadata": {
+        "navigations": [
+          "back"
+        ],
+        "required": true
+      },
+      "elements": [
+        {
+          "name": "header",
+          "type": "ELEMENT_GROUP",
+          "widget": {
+            "type": "header",
+            "content": null,
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": [
+            {
+              "name": "progress_bar",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "progress_bar",
+                "content": "33",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "size": "h:6",
+                "background_color": "#CBD2D4",
+                "selected_color": "#00CF92"
+              },
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": null,
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "footer",
+          "type": "ELEMENT_GROUP",
+          "widget": {
+            "type": "footer",
+            "content": null,
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": [
+            {
+              "name": "next_btn",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "action_btn",
+                "content": "Next",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "font": "mdBig14",
+                "margin": "0 0 0 0",
+                "size": "h:48",
+                "background_color": "#0070BA",
+                "text_color": "#FFFFFF"
+              },
+              "actions": [
+                {
+                  "trigger": "CLICK",
+                  "effects": [
+                    {
+                      "type": "NAVIGATE",
+                      "arguments": [
+                        "{\"next\":\"address_list_screen\"}"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": null,
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "name_dob_title",
+          "type": "VIEW_ELEMENT",
+          "widget": {
+            "type": "text",
+            "content": "Let's start by confirming your name and adding your data of birth",
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "font": "xlMedium",
+            "margin": "24 24 24 0",
+            "text_color": "#2C2E2F"
+          },
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "name",
+          "type": "DATA_ELEMENT",
+          "widget": {
+            "type": "text_input",
+            "content": "1|||100|123456789 Jimbru Willie",
+            "placeholder": "Legal full name",
+            "read_only": true,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "margin": "24 64 24 0",
+            "font": "xlMedium"
+          },
+          "actions": null,
+          "validations": null,
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "data_path": "#/data/X7LPAMNZLMWMY/data/name",
+          "allow_inline_replace": false
+        },
+        {
+          "name": "name_dob_text",
+          "type": "VIEW_ELEMENT",
+          "widget": {
+            "type": "text",
+            "content": "Does your name match your government-issued photo ID? If not, you can <a href=https://www.paypal.com/us/smarthelp/article/how-do-i-change-the-name-on-my-paypal-account-faq926>learn how to edit your name</a> before continuing.",
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "font": "smRegular",
+            "margin": "24 0 24 0",
+            "text_color": "#687173"
+          },
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "date_of_birth",
+          "type": "DATA_ELEMENT",
+          "widget": {
+            "type": "text_input",
+            "content": "01/01/1989",
+            "placeholder": "Date of birth",
+            "read_only": false,
+            "format": "MM/dd/yyyy",
+            "required": true,
+            "keyboard_type": "number",
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "margin": "24 48 24 8",
+            "font": "xlMedium"
+          },
+          "actions": null,
+          "validations": [
+            {
+              "type": "required",
+              "arguments": null,
+              "error_msg": "This field is required"
+            },
+            {
+              "type": "date_format",
+              "arguments": [
+                "MM/dd/yyyy"
+              ],
+              "error_msg": "Check your date of birth and try again using MM/DD/YYYY format."
+            },
+            {
+              "type": "range",
+              "arguments": [
+                "MM/dd/yyyy",
+                "18",
+                "100"
+              ],
+              "error_msg": "You must be 18 or older to use PayPal."
+            }
+          ],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "data_path": "#/data/X7LPAMNZLMWMY/data/date_of_birth",
+          "allow_inline_replace": false
+        }
+      ],
+      "next": "address_list_screen"
+    },
+    {
+      "name": "address_list_screen",
+      "metadata": {
+        "navigations": [
+          "back"
+        ],
+        "required": true
+      },
+      "elements": [
+        {
+          "name": "header",
+          "type": "ELEMENT_GROUP",
+          "widget": {
+            "type": "header",
+            "content": null,
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": [
+            {
+              "name": "progress_bar",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "progress_bar",
+                "content": "66",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "size": "h:6",
+                "background_color": "#CBD2D4",
+                "selected_color": "#00CF92"
+              },
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": null,
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "footer",
+          "type": "ELEMENT_GROUP",
+          "widget": {
+            "type": "footer",
+            "content": null,
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": [
+            {
+              "name": "add_address_link",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "action_btn",
+                "content": "Add Address",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "margin": "0 0 0 0",
+                "font": "mdBig14",
+                "size": "h:48",
+                "background_color": "#FFFFFF",
+                "background_alpha": "0",
+                "text_color": "#0070BA"
+              },
+              "actions": [
+                {
+                  "trigger": "CLICK",
+                  "effects": [
+                    {
+                      "type": "NAVIGATE",
+                      "arguments": [
+                        "{\"next\": \"add_address_screen\"}"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "next_btn",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "action_btn",
+                "content": "Next",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "font": "mdBig14",
+                "margin": "0 0 0 0",
+                "size": "h:48",
+                "background_color": "#0070BA",
+                "text_color": "#FFFFFF"
+              },
+              "actions": [
+                {
+                  "trigger": "CLICK",
+                  "effects": [
+                    {
+                      "type": "NAVIGATE",
+                      "arguments": [
+                        "{\"next\": \"ssn_itin_screen\"}"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": null,
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "screen_title",
+          "type": "VIEW_ELEMENT",
+          "widget": {
+            "type": "text",
+            "content": "Is this your primary address?",
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "font": "xlMedium",
+            "margin": "24 28 24 0",
+            "text_color": "#2C2E2F"
+          },
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "address_list_subtitle",
+          "type": "VIEW_ELEMENT",
+          "widget": {
+            "type": "text",
+            "content": "Your primary address is where you currently live, not a PO Box number.",
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "font": "smRegular",
+            "margin": "24 8 24 0",
+            "text_color": "#687173"
+          },
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "home_address",
+          "type": "DATA_ELEMENT",
+          "widget": {
+            "type": "drop_down",
+            "content": "7178102315506158055",
+            "placeholder": "Primary address",
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": [
+              {
+                "key": "7178102315506158055",
+                "content": "2211 N 1st St 42776 73rd Avenue N San Jose CA"
+              }
+            ],
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "margin": "24 40 24 0"
+          },
+          "actions": null,
+          "validations": null,
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "data_path": "#/data/X7LPAMNZLMWMY/data/home_address",
+          "allow_inline_replace": false
+        },
+        {
+          "name": "edit_address_btn",
+          "type": "VIEW_ELEMENT",
+          "widget": {
+            "type": "action_btn",
+            "content": "Edit Address",
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "font": "mdBig14",
+            "margin": "30 16 30 0",
+            "background_color": "#FFFFFF",
+            "background_alpha": "0",
+            "text_color": "#0070BA",
+            "alignment": "left"
+          },
+          "actions": [
+            {
+              "trigger": "CLICK",
+              "effects": [
+                {
+                  "type": "NAVIGATE",
+                  "arguments": [
+                    "{\"next\": \"edit_address_screen\"}",
+                    "{\"dynamic\":{\"address\":\"@dataMappings:$home_address\"}}"
+                  ]
+                }
+              ]
+            }
+          ],
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        }
+      ],
+      "next": "add_address_screen"
+    },
+    {
+      "name": "add_address_screen",
+      "metadata": {
+        "navigations": [
+          "back"
+        ],
+        "required": true
+      },
+      "elements": [
+        {
+          "name": "header",
+          "type": "ELEMENT_GROUP",
+          "widget": {
+            "type": "header",
+            "content": null,
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": [
+            {
+              "name": "progress_bar",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "progress_bar",
+                "content": "66",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "size": "h:6",
+                "background_color": "#CBD2D4",
+                "selected_color": "#00CF92"
+              },
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": null,
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "footer",
+          "type": "ELEMENT_GROUP",
+          "widget": {
+            "type": "footer",
+            "content": null,
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": [
+            {
+              "name": "next_btn",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "action_btn",
+                "content": "Next",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "font": "mdBig14",
+                "margin": "0 0 0 0",
+                "size": "h:48",
+                "background_color": "#0070BA",
+                "text_color": "#FFFFFF"
+              },
+              "actions": [
+                {
+                  "trigger": "CLICK",
+                  "effects": [
+                    {
+                      "type": "NAVIGATE",
+                      "arguments": [
+                        "{\"next\": \"ssn_itin_screen\"}"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": null,
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "screen_title",
+          "type": "VIEW_ELEMENT",
+          "widget": {
+            "type": "text",
+            "content": "We'd like to know your primary address",
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "font": "xlMedium",
+            "margin": "24 24 24 0",
+            "text_color": "#2C2E2F"
+          },
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "address_subtitle",
+          "type": "VIEW_ELEMENT",
+          "widget": {
+            "type": "text",
+            "content": "Your primary address is where you currently live, not a PO Box number.",
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "margin": "24 8 24 0",
+            "font": "smRegular",
+            "text_color": "#687173"
+          },
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "address",
+          "type": "ELEMENT_GROUP",
+          "widget": {
+            "type": "address",
+            "content": null,
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": [
+            {
+              "name": "id",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "text_input",
+                "content": "",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": true
+              },
+              "elements": null,
+              "style": null,
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "line1",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "text_input",
+                "content": "",
+                "placeholder": "Street address, not a PO Box number",
+                "read_only": false,
+                "format": null,
+                "required": true,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "margin": "22 48 22 0"
+              },
+              "actions": null,
+              "validations": [
+                {
+                  "type": "required",
+                  "arguments": null,
+                  "error_msg": "This field is required"
+                }
+              ],
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "line2",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "text_input",
+                "content": "",
+                "placeholder": "Apt., ste., bldg. (if applicable)",
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "margin": "22 24 22 0"
+              },
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "city",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "text_input",
+                "content": "",
+                "placeholder": "City",
+                "read_only": false,
+                "format": null,
+                "required": true,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "margin": "22 24 22 0"
+              },
+              "actions": null,
+              "validations": [
+                {
+                  "type": "required",
+                  "arguments": null,
+                  "error_msg": "This field is required"
+                }
+              ],
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "state",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "full_screen_drop_down",
+                "content": "",
+                "placeholder": "State",
+                "read_only": false,
+                "format": null,
+                "required": true,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": [
+                  {
+                    "key": "AL",
+                    "content": "Alabama"
+                  },
+                  {
+                    "key": "AK",
+                    "content": "Alaska"
+                  },
+                  {
+                    "key": "AS",
+                    "content": "American Samoa"
+                  },
+                  {
+                    "key": "AZ",
+                    "content": "Arizona"
+                  },
+                  {
+                    "key": "AR",
+                    "content": "Arkansas"
+                  },
+                  {
+                    "key": "AA",
+                    "content": "Armed Forces Americas"
+                  },
+                  {
+                    "key": "AE",
+                    "content": "Armed Forces Europe"
+                  },
+                  {
+                    "key": "AP",
+                    "content": "Armed Forces Pacific"
+                  },
+                  {
+                    "key": "CA",
+                    "content": "California"
+                  },
+                  {
+                    "key": "CO",
+                    "content": "Colorado"
+                  },
+                  {
+                    "key": "CT",
+                    "content": "Connecticut"
+                  },
+                  {
+                    "key": "DE",
+                    "content": "Delaware"
+                  },
+                  {
+                    "key": "DC",
+                    "content": "District of Columbia"
+                  },
+                  {
+                    "key": "FM",
+                    "content": "Federated States of Micronesia"
+                  },
+                  {
+                    "key": "FL",
+                    "content": "Florida"
+                  },
+                  {
+                    "key": "GA",
+                    "content": "Georgia"
+                  },
+                  {
+                    "key": "GU",
+                    "content": "Guam"
+                  },
+                  {
+                    "key": "HI",
+                    "content": "Hawaii"
+                  },
+                  {
+                    "key": "ID",
+                    "content": "Idaho"
+                  },
+                  {
+                    "key": "IL",
+                    "content": "Illinois"
+                  },
+                  {
+                    "key": "IN",
+                    "content": "Indiana"
+                  },
+                  {
+                    "key": "IA",
+                    "content": "Iowa"
+                  },
+                  {
+                    "key": "KS",
+                    "content": "Kansas"
+                  },
+                  {
+                    "key": "KY",
+                    "content": "Kentucky"
+                  },
+                  {
+                    "key": "LA",
+                    "content": "Louisiana"
+                  },
+                  {
+                    "key": "ME",
+                    "content": "Maine"
+                  },
+                  {
+                    "key": "MH",
+                    "content": "Marshall Islands"
+                  },
+                  {
+                    "key": "MD",
+                    "content": "Maryland"
+                  },
+                  {
+                    "key": "MA",
+                    "content": "Massachusetts"
+                  },
+                  {
+                    "key": "MI",
+                    "content": "Michigan"
+                  },
+                  {
+                    "key": "MN",
+                    "content": "Minnesota"
+                  },
+                  {
+                    "key": "MS",
+                    "content": "Mississippi"
+                  },
+                  {
+                    "key": "MO",
+                    "content": "Missouri"
+                  },
+                  {
+                    "key": "MT",
+                    "content": "Montana"
+                  },
+                  {
+                    "key": "NE",
+                    "content": "Nebraska"
+                  },
+                  {
+                    "key": "NV",
+                    "content": "Nevada"
+                  },
+                  {
+                    "key": "NH",
+                    "content": "New Hampshire"
+                  },
+                  {
+                    "key": "NJ",
+                    "content": "New Jersey"
+                  },
+                  {
+                    "key": "NM",
+                    "content": "New Mexico"
+                  },
+                  {
+                    "key": "NY",
+                    "content": "New York"
+                  },
+                  {
+                    "key": "NC",
+                    "content": "North Carolina"
+                  },
+                  {
+                    "key": "ND",
+                    "content": "North Dakota"
+                  },
+                  {
+                    "key": "MP",
+                    "content": "Northern Mariana Islands"
+                  },
+                  {
+                    "key": "OH",
+                    "content": "Ohio"
+                  },
+                  {
+                    "key": "OK",
+                    "content": "Oklahoma"
+                  },
+                  {
+                    "key": "OR",
+                    "content": "Oregon"
+                  },
+                  {
+                    "key": "PW",
+                    "content": "Palau"
+                  },
+                  {
+                    "key": "PA",
+                    "content": "Pennsylvania"
+                  },
+                  {
+                    "key": "PR",
+                    "content": "Puerto Rico"
+                  },
+                  {
+                    "key": "RI",
+                    "content": "Rhode Island"
+                  },
+                  {
+                    "key": "SC",
+                    "content": "South Carolina"
+                  },
+                  {
+                    "key": "SD",
+                    "content": "South Dakota"
+                  },
+                  {
+                    "key": "TN",
+                    "content": "Tennessee"
+                  },
+                  {
+                    "key": "TX",
+                    "content": "Texas"
+                  },
+                  {
+                    "key": "UT",
+                    "content": "Utah"
+                  },
+                  {
+                    "key": "VT",
+                    "content": "Vermont"
+                  },
+                  {
+                    "key": "VI",
+                    "content": "Virgin Islands"
+                  },
+                  {
+                    "key": "VA",
+                    "content": "Virginia"
+                  },
+                  {
+                    "key": "WA",
+                    "content": "Washington"
+                  },
+                  {
+                    "key": "WV",
+                    "content": "West Virginia"
+                  },
+                  {
+                    "key": "WI",
+                    "content": "Wisconsin"
+                  },
+                  {
+                    "key": "WY",
+                    "content": "Wyoming"
+                  }
+                ],
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "margin": "22 24 22 0"
+              },
+              "actions": [
+                {
+                  "trigger": "CLICK",
+                  "effects": [
+                    {
+                      "type": "SET_TITLE",
+                      "arguments": [
+                        "{\"title\":\"Select a state\"}"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "validations": [
+                {
+                  "type": "required",
+                  "arguments": null,
+                  "error_msg": "This field is required"
+                }
+              ],
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "postal_code",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "text_input",
+                "content": "",
+                "placeholder": "ZIP code",
+                "read_only": false,
+                "format": null,
+                "required": true,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "margin": "22 24 22 0"
+              },
+              "actions": null,
+              "validations": [
+                {
+                  "type": "required",
+                  "arguments": null,
+                  "error_msg": "This field is required"
+                },
+                {
+                  "type": "regex",
+                  "arguments": [
+                    "\\d{5}([ \\-]?\\d{4})?"
+                  ],
+                  "error_msg": "Check your ZIP code and try again."
+                }
+              ],
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "country_code",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "text_input",
+                "content": "US",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": true
+              },
+              "elements": null,
+              "style": null,
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": null,
+          "actions": null,
+          "validations": [
+            {
+              "type": "server",
+              "arguments": [
+                "address"
+              ],
+              "error_msg": "null"
+            }
+          ],
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        }
+      ],
+      "next": "ssn_itin_screen"
+    },
+    {
+      "name": "edit_address_screen",
+      "metadata": {
+        "navigations": [
+          "back"
+        ],
+        "required": true
+      },
+      "elements": [
+        {
+          "name": "header",
+          "type": "ELEMENT_GROUP",
+          "widget": {
+            "type": "header",
+            "content": null,
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": [
+            {
+              "name": "progress_bar",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "progress_bar",
+                "content": "66",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "size": "h:6",
+                "background_color": "#CBD2D4",
+                "selected_color": "#00CF92"
+              },
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": null,
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "footer",
+          "type": "ELEMENT_GROUP",
+          "widget": {
+            "type": "footer",
+            "content": null,
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": [
+            {
+              "name": "next_btn",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "action_btn",
+                "content": "Next",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "font": "mdBig14",
+                "margin": "0 0 0 0",
+                "size": "h:48",
+                "background_color": "#0070BA",
+                "text_color": "#FFFFFF"
+              },
+              "actions": [
+                {
+                  "trigger": "CLICK",
+                  "effects": [
+                    {
+                      "type": "NAVIGATE",
+                      "arguments": [
+                        "{\"next\": \"ssn_itin_screen\"}"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": null,
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "screen_title",
+          "type": "VIEW_ELEMENT",
+          "widget": {
+            "type": "text",
+            "content": "Edit your primary address",
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "font": "xlMedium",
+            "margin": "24 24 24 24",
+            "text_color": "#2C2E2F"
+          },
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "address",
+          "type": "ELEMENT_GROUP",
+          "widget": {
+            "type": "address",
+            "content": null,
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": [
+            {
+              "name": "id",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "text_input",
+                "content": "@address:id",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": true
+              },
+              "elements": null,
+              "style": null,
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "line1",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "text_input",
+                "content": "@address:line1",
+                "placeholder": "Street address, not a PO Box number",
+                "read_only": false,
+                "format": null,
+                "required": true,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "margin": "22 48 22 0"
+              },
+              "actions": null,
+              "validations": [
+                {
+                  "type": "required",
+                  "arguments": null,
+                  "error_msg": "This field is required"
+                }
+              ],
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "line2",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "text_input",
+                "content": "@address:line2",
+                "placeholder": "Apt., ste., bldg. (if applicable)",
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "margin": "22 24 22 0"
+              },
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "city",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "text_input",
+                "content": "@address:city",
+                "placeholder": "City",
+                "read_only": false,
+                "format": null,
+                "required": true,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "margin": "22 24 22 0"
+              },
+              "actions": null,
+              "validations": [
+                {
+                  "type": "required",
+                  "arguments": null,
+                  "error_msg": "This field is required"
+                }
+              ],
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "state",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "full_screen_drop_down",
+                "content": "@address:state",
+                "placeholder": "State",
+                "read_only": false,
+                "format": null,
+                "required": true,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": [
+                  {
+                    "key": "AL",
+                    "content": "Alabama"
+                  },
+                  {
+                    "key": "AK",
+                    "content": "Alaska"
+                  },
+                  {
+                    "key": "AS",
+                    "content": "American Samoa"
+                  },
+                  {
+                    "key": "AZ",
+                    "content": "Arizona"
+                  },
+                  {
+                    "key": "AR",
+                    "content": "Arkansas"
+                  },
+                  {
+                    "key": "AA",
+                    "content": "Armed Forces Americas"
+                  },
+                  {
+                    "key": "AE",
+                    "content": "Armed Forces Europe"
+                  },
+                  {
+                    "key": "AP",
+                    "content": "Armed Forces Pacific"
+                  },
+                  {
+                    "key": "CA",
+                    "content": "California"
+                  },
+                  {
+                    "key": "CO",
+                    "content": "Colorado"
+                  },
+                  {
+                    "key": "CT",
+                    "content": "Connecticut"
+                  },
+                  {
+                    "key": "DE",
+                    "content": "Delaware"
+                  },
+                  {
+                    "key": "DC",
+                    "content": "District of Columbia"
+                  },
+                  {
+                    "key": "FM",
+                    "content": "Federated States of Micronesia"
+                  },
+                  {
+                    "key": "FL",
+                    "content": "Florida"
+                  },
+                  {
+                    "key": "GA",
+                    "content": "Georgia"
+                  },
+                  {
+                    "key": "GU",
+                    "content": "Guam"
+                  },
+                  {
+                    "key": "HI",
+                    "content": "Hawaii"
+                  },
+                  {
+                    "key": "ID",
+                    "content": "Idaho"
+                  },
+                  {
+                    "key": "IL",
+                    "content": "Illinois"
+                  },
+                  {
+                    "key": "IN",
+                    "content": "Indiana"
+                  },
+                  {
+                    "key": "IA",
+                    "content": "Iowa"
+                  },
+                  {
+                    "key": "KS",
+                    "content": "Kansas"
+                  },
+                  {
+                    "key": "KY",
+                    "content": "Kentucky"
+                  },
+                  {
+                    "key": "LA",
+                    "content": "Louisiana"
+                  },
+                  {
+                    "key": "ME",
+                    "content": "Maine"
+                  },
+                  {
+                    "key": "MH",
+                    "content": "Marshall Islands"
+                  },
+                  {
+                    "key": "MD",
+                    "content": "Maryland"
+                  },
+                  {
+                    "key": "MA",
+                    "content": "Massachusetts"
+                  },
+                  {
+                    "key": "MI",
+                    "content": "Michigan"
+                  },
+                  {
+                    "key": "MN",
+                    "content": "Minnesota"
+                  },
+                  {
+                    "key": "MS",
+                    "content": "Mississippi"
+                  },
+                  {
+                    "key": "MO",
+                    "content": "Missouri"
+                  },
+                  {
+                    "key": "MT",
+                    "content": "Montana"
+                  },
+                  {
+                    "key": "NE",
+                    "content": "Nebraska"
+                  },
+                  {
+                    "key": "NV",
+                    "content": "Nevada"
+                  },
+                  {
+                    "key": "NH",
+                    "content": "New Hampshire"
+                  },
+                  {
+                    "key": "NJ",
+                    "content": "New Jersey"
+                  },
+                  {
+                    "key": "NM",
+                    "content": "New Mexico"
+                  },
+                  {
+                    "key": "NY",
+                    "content": "New York"
+                  },
+                  {
+                    "key": "NC",
+                    "content": "North Carolina"
+                  },
+                  {
+                    "key": "ND",
+                    "content": "North Dakota"
+                  },
+                  {
+                    "key": "MP",
+                    "content": "Northern Mariana Islands"
+                  },
+                  {
+                    "key": "OH",
+                    "content": "Ohio"
+                  },
+                  {
+                    "key": "OK",
+                    "content": "Oklahoma"
+                  },
+                  {
+                    "key": "OR",
+                    "content": "Oregon"
+                  },
+                  {
+                    "key": "PW",
+                    "content": "Palau"
+                  },
+                  {
+                    "key": "PA",
+                    "content": "Pennsylvania"
+                  },
+                  {
+                    "key": "PR",
+                    "content": "Puerto Rico"
+                  },
+                  {
+                    "key": "RI",
+                    "content": "Rhode Island"
+                  },
+                  {
+                    "key": "SC",
+                    "content": "South Carolina"
+                  },
+                  {
+                    "key": "SD",
+                    "content": "South Dakota"
+                  },
+                  {
+                    "key": "TN",
+                    "content": "Tennessee"
+                  },
+                  {
+                    "key": "TX",
+                    "content": "Texas"
+                  },
+                  {
+                    "key": "UT",
+                    "content": "Utah"
+                  },
+                  {
+                    "key": "VT",
+                    "content": "Vermont"
+                  },
+                  {
+                    "key": "VI",
+                    "content": "Virgin Islands"
+                  },
+                  {
+                    "key": "VA",
+                    "content": "Virginia"
+                  },
+                  {
+                    "key": "WA",
+                    "content": "Washington"
+                  },
+                  {
+                    "key": "WV",
+                    "content": "West Virginia"
+                  },
+                  {
+                    "key": "WI",
+                    "content": "Wisconsin"
+                  },
+                  {
+                    "key": "WY",
+                    "content": "Wyoming"
+                  }
+                ],
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "margin": "22 24 22 0"
+              },
+              "actions": [
+                {
+                  "trigger": "CLICK",
+                  "effects": [
+                    {
+                      "type": "SET_TITLE",
+                      "arguments": [
+                        "{\"title\":\"Select a state\"}"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "validations": [
+                {
+                  "type": "required",
+                  "arguments": null,
+                  "error_msg": "This field is required"
+                }
+              ],
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "postal_code",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "text_input",
+                "content": "@address:postal_code",
+                "placeholder": "ZIP code",
+                "read_only": false,
+                "format": null,
+                "required": true,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "margin": "22 24 22 0"
+              },
+              "actions": null,
+              "validations": [
+                {
+                  "type": "required",
+                  "arguments": null,
+                  "error_msg": "This field is required"
+                },
+                {
+                  "type": "regex",
+                  "arguments": [
+                    "\\d{5}([ \\-]?\\d{4})?"
+                  ],
+                  "error_msg": "Check your ZIP code and try again."
+                }
+              ],
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            },
+            {
+              "name": "country_code",
+              "type": "DATA_ELEMENT",
+              "widget": {
+                "type": "text_input",
+                "content": "US",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": true
+              },
+              "elements": null,
+              "style": null,
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": null,
+          "actions": null,
+          "validations": [
+            {
+              "type": "server",
+              "arguments": [
+                "address"
+              ],
+              "error_msg": "null"
+            }
+          ],
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        }
+      ],
+      "next": "ssn_itin_screen"
+    },
+    {
+      "name": "ssn_itin_screen",
+      "metadata": {
+        "navigations": [
+          "back"
+        ],
+        "required": true
+      },
+      "elements": [
+        {
+          "name": "header",
+          "type": "ELEMENT_GROUP",
+          "widget": {
+            "type": "header",
+            "content": null,
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": [
+            {
+              "name": "progress_bar",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "progress_bar",
+                "content": "99",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "size": "h:6",
+                "background_color": "#CBD2D4",
+                "selected_color": "#00CF92"
+              },
+              "actions": null,
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": null,
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "footer",
+          "type": "ELEMENT_GROUP",
+          "widget": {
+            "type": "footer",
+            "content": null,
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": [
+            {
+              "name": "submit_btn",
+              "type": "VIEW_ELEMENT",
+              "widget": {
+                "type": "action_btn",
+                "content": "Submit",
+                "placeholder": null,
+                "read_only": false,
+                "format": null,
+                "required": false,
+                "keyboard_type": null,
+                "masked": false,
+                "max_length": null,
+                "options": null,
+                "custom_component": null,
+                "hidden": false
+              },
+              "elements": null,
+              "style": {
+                "font": "mdBig14",
+                "margin": "0 0 0 0",
+                "size": "h:48",
+                "background_color": "#0070BA",
+                "text_color": "#FFFFFF"
+              },
+              "actions": [
+                {
+                  "trigger": "CLICK",
+                  "effects": [
+                    {
+                      "type": "SUBMIT",
+                      "arguments": [
+                        "{\"title\":\"Confirming your info...\"}",
+                        "{\"subtitle\":\"We encrypt your information and transmit it securely.\"}"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "validations": null,
+              "entity_role": null,
+              "data_path": null,
+              "allow_inline_replace": false
+            }
+          ],
+          "style": null,
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "screen_title",
+          "type": "VIEW_ELEMENT",
+          "widget": {
+            "type": "text",
+            "content": "You're almost done. We just need your tax ID number.",
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "margin": "24 24 24 0",
+            "font": "xlMedium",
+            "text_color": "#2C2E2F"
+          },
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "ssn_itin_subtitle",
+          "type": "VIEW_ELEMENT",
+          "widget": {
+            "type": "text",
+            "content": "We're required by law to collect this info.",
+            "placeholder": null,
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "margin": "24 8 24 0",
+            "font": "smRegular",
+            "text_color": "#687173"
+          },
+          "actions": null,
+          "validations": null,
+          "entity_role": null,
+          "data_path": null,
+          "allow_inline_replace": false
+        },
+        {
+          "name": "tax_id_preference",
+          "type": "DATA_ELEMENT",
+          "widget": {
+            "type": "drop_down",
+            "content": "ssn",
+            "placeholder": "Tax ID number",
+            "read_only": false,
+            "format": null,
+            "required": false,
+            "keyboard_type": null,
+            "masked": false,
+            "max_length": null,
+            "options": [
+              {
+                "key": "ssn",
+                "content": "Social Security Number"
+              },
+              {
+                "key": "itin",
+                "content": "Individual Taxpayer Identification Number"
+              }
+            ],
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "margin": "24 32 24 24",
+            "alignment": "center-horizontal",
+            "font": "xlMedium"
+          },
+          "actions": [
+            {
+              "trigger": "CHANGE",
+              "effects": [
+                {
+                  "type": "CHANGE",
+                  "arguments": [
+                    "{\"ssn\":{\"show\":[\"ssn\"],\"hide\":[\"itin\"]},\"itin\":{\"show\":[\"itin\"],\"hide\":[\"ssn\"]}}"
+                  ]
+                }
+              ]
+            }
+          ],
+          "validations": null,
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "data_path": "#/data/X7LPAMNZLMWMY/data/tax_id_preference",
+          "allow_inline_replace": false
+        },
+        {
+          "name": "ssn",
+          "type": "DATA_ELEMENT",
+          "widget": {
+            "type": "text_input",
+            "content": null,
+            "placeholder": "Last 4 digits of your SSN",
+            "read_only": false,
+            "format": null,
+            "required": true,
+            "keyboard_type": "number",
+            "masked": true,
+            "max_length": "4",
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "margin": "24 16 24 0",
+            "font": "xlMedium"
+          },
+          "actions": null,
+          "validations": [
+            {
+              "type": "required",
+              "arguments": null,
+              "error_msg": "This field is required"
+            },
+            {
+              "type": "regex",
+              "arguments": [
+                "(?!0000)[0-9]{4}"
+              ],
+              "error_msg": "Check the 4-digits of your SSN and try again."
+            }
+          ],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "data_path": "#/data/X7LPAMNZLMWMY/data/ssn",
+          "allow_inline_replace": false
+        },
+        {
+          "name": "itin",
+          "type": "DATA_ELEMENT",
+          "widget": {
+            "type": "text_input",
+            "content": null,
+            "placeholder": "Enter your 9-digit ITIN",
+            "read_only": false,
+            "format": null,
+            "required": true,
+            "keyboard_type": "number",
+            "masked": true,
+            "max_length": "9",
+            "options": null,
+            "custom_component": null,
+            "hidden": false
+          },
+          "elements": null,
+          "style": {
+            "margin": "24 0 24 0",
+            "font": "xlMedium"
+          },
+          "actions": null,
+          "validations": [
+            {
+              "type": "required",
+              "arguments": null,
+              "error_msg": "This field is required"
+            },
+            {
+              "type": "regex",
+              "arguments": [
+                "^(9[0-9]{2})([7][0-9]|8[0-8]|9[0-2]|9[4-9])([0-9]{4})$"
+              ],
+              "error_msg": "Check the 9-digits of your ITIN and try again."
+            }
+          ],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "data_path": "#/data/X7LPAMNZLMWMY/data/itin",
+          "allow_inline_replace": false
+        }
+      ],
+      "next": null
+    }
+  ]
+}

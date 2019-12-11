@@ -9,6 +9,10 @@ const lodash = require('lodash');
 const app = express();
 app.use(cors());
 
+const defaultWebTemplate = require('./templates/web-default');
+const defaultMobileTemplate = require('./templates/mobile-default');
+const defaultMobileData = require('./data/mobile-default');
+const defaultWebData = require('./data/web-default');
 
 app.use(bodyParser.json());
 app.use(logger('dev'));
@@ -25,8 +29,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const mobileTemplates = {};
-const webTemplates = {};
+const mobileTemplates = {default: defaultMobileTemplate};
+const webTemplates = {default:defaultWebTemplate};
 const templates = {};
 
 app.get('/test', function (req, res, next) {
@@ -59,7 +63,7 @@ app.post('/adroit/templates/add', function (req, res, next) {
 app.get('/adroit/template/mobile/:name', function (req, res, next) {
     const name = lodash.get(req.params, 'name', '').toLowerCase();
     const result = lodash.get(mobileTemplates, name, lodash.get(templates, name, {}));
-    res.status(200).json({templateResponse: result});
+    res.status(200).json({templateResponse: result, dataMappings:defaultMobileData});
 
 });
 app.get('/adroit/template/web/:name', function (req, res, next) {

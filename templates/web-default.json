@@ -1,0 +1,456 @@
+{
+  "name": "pio_data",
+  "metadata": {
+    "progress": {
+      "enabled": true,
+      "component": "ProgressBar"
+    }
+  },
+  "validations": [],
+  "style": {},
+  "actions": [],
+  "initial_screen": "name_and_dob_page",
+  "screens": [
+    {
+      "name": "name_and_dob_page",
+      "next": "address_page",
+      "allow_navigation": true,
+      "validations": [],
+      "style": {},
+      "actions": [],
+      "namespace": "personal_info",
+      "elements": [
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "title",
+          "metadata": {},
+          "validations": [],
+          "style": { "size": "xl4" },
+          "actions": [],
+          "widget": { "type": "Text" },
+          "content": "name_and_dob_page.title.content"
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "subtitle",
+          "metadata": { "tip_content": "name_and_dob_page.subtitle.tip_content" },
+          "validations": [],
+          "style": { "size": "md" },
+          "actions": [],
+          "widget": { "type": "Subtitle" },
+          "content": "name_and_dob_page.subtitle.content"
+        },
+        {
+          "type": "DATA_ELEMENT",
+          "name": "name",
+          "metadata": {},
+          "validations": [],
+          "style": {},
+          "actions": [],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "widget": {
+            "type": "Name",
+            "label": "name_and_dob_page.name.label",
+            "attributes": { "read_only": true }
+          }
+        },
+        {
+          "type": "DATA_ELEMENT",
+          "name": "date_of_birth",
+          "metadata": {},
+          "validations": ["isOver18", "isUnder100", "isNotFutureDate", "isValidDate"],
+          "style": {},
+          "actions": [],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "widget": {
+            "type": "DatePicker",
+            "label": "name_and_dob_page.date_of_birth.label",
+            "attributes": { "type": "tel" }
+          }
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "submit",
+          "metadata": {},
+          "validations": [],
+          "style": {
+            "size": "md"
+          },
+          "actions": [
+            {
+              "trigger": "SUBMIT",
+              "effects": [
+                {
+                  "type": "ALERT",
+                  "arguments": ["test"]
+                }
+              ]
+            }
+          ],
+          "widget": {
+            "type": "Button",
+            "text": "name_and_dob_page.nextButton.label",
+            "label": "name_and_dob_page.nextButton.label",
+            "attributes": {}
+          }
+        }
+      ]
+    },
+    {
+      "name": "address_page",
+      "next": "tax_id_page",
+      "allow_navigation": true,
+      "validations": [],
+      "style": {},
+      "actions": [],
+      "namespace": "personal_info",
+      "elements": [
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "title",
+          "metadata": {},
+          "validations": [],
+          "style": { "size": "xl4" },
+          "actions": [],
+          "widget": { "type": "Text" },
+          "content": "title.content"
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "subtitle",
+          "metadata": { "tip_content": "subtitle.tip_content" },
+          "validations": [],
+          "style": { "size": "md" },
+          "actions": [],
+          "widget": { "type": "Subtitle" },
+          "content": "subtitle.content"
+        },
+        {
+          "type": "DATA_ELEMENT",
+          "name": "home_address",
+          "metadata": {
+            "supported_countries": ["US"]
+          },
+          "validations": ["@griffin/validateAddress"],
+          "style": {},
+          "actions": [],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "widget": {
+            "type": "Address",
+            "label": "home_address.label",
+            "title": "home_address.title"
+          }
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "submit",
+          "metadata": {},
+          "validations": [],
+          "style": { "size": "md" },
+          "actions": [{ "trigger": "SUBMIT", "effects": [{ "type": "ALERT", "arguments": ["test"] }] }],
+          "widget": {
+            "type": "Button",
+            "text": "nextButton.label",
+            "label": "nextButton.label",
+            "attributes": {}
+          }
+        }
+      ]
+    },
+    {
+      "name": "tax_id_page",
+      "next": "review_page",
+      "allow_navigation": true,
+      "validations": [],
+      "style": {},
+      "actions": [],
+      "namespace": "personal_info",
+      "elements": [
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "title",
+          "metadata": {},
+          "validations": [],
+          "style": { "size": "xl4" },
+          "actions": [],
+          "widget": { "type": "Text" },
+          "content": "title.content"
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "subtitle",
+          "metadata": { "tip_content": "subtitle.tip_content" },
+          "validations": [],
+          "style": { "size": "md" },
+          "actions": [],
+          "widget": { "type": "Subtitle" },
+          "content": "subtitle.content"
+        },
+        {
+          "type": "DATA_ELEMENT",
+          "name": "tax_id_preference",
+          "metadata": {
+            "field_dependency": {
+              "onChange": {
+                "ssn": {
+                  "show": ["ssn"],
+                  "hide": ["itin"]
+                },
+                "itin": {
+                  "show": ["itin"],
+                  "hide": ["ssn"]
+                }
+              }
+            }
+          },
+          "validations": [],
+          "style": {
+            "display": "inline"
+          },
+          "actions": [],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "widget": {
+            "type": "RadioGroup",
+            "label": "tax_id_preference.label",
+            "attributes": {
+              "type": "tel",
+              "options": [
+                { "text": "tax_id_preference.ssn.label", "value": "ssn", "helper_text": "tax_id_preference.ssn.tip" },
+                { "text": "tax_id_preference.itin.label", "value": "itin", "helper_text": "tax_id_preference.itin.tip" }
+              ]
+            }
+          }
+        },
+        {
+          "type": "DATA_ELEMENT",
+          "name": "ssn",
+          "metadata": {},
+          "validations": [],
+          "style": {},
+          "actions": [],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "widget": {
+            "type": "TextInput",
+            "label": "ssn.label",
+            "attributes": { "read_only": false, "masked": true, "type": "tel", "format": "1111" },
+            "rules": [
+              {
+                "effect": "SHOW",
+                "condition": {
+                  "type": "expectedValue",
+                  "data_path": "#/tax_id_preference/value",
+                  "data": "ssn"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "DATA_ELEMENT",
+          "name": "itin",
+          "metadata": {},
+          "validations": [],
+          "style": {},
+          "actions": [],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "widget": {
+            "type": "TextInput",
+            "label": "itin.label",
+            "attributes": {
+              "read_only": false,
+              "masked": true,
+              "type": "tel",
+              "format": "111-11-1111",
+              "hidden": true
+            },
+            "rules": [
+              {
+                "effect": "SHOW",
+                "condition": {
+                  "type": "expectedValue",
+                  "data_path": "#/tax_id_preference/value",
+                  "data": "itin"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "submit",
+          "metadata": {},
+          "validations": [],
+          "style": { "size": "md" },
+          "actions": [{ "trigger": "SUBMIT", "effects": [{ "type": "ALERT", "arguments": ["test"] }] }],
+          "widget": {
+            "type": "Button",
+            "text": "nextButton.label",
+            "label": "nextButton.label",
+            "attributes": {}
+          }
+        }
+      ]
+    },
+    {
+      "name": "review_page",
+      "next": "proof_of_id_page",
+      "type": "SUBMIT",
+      "allow_navigation": true,
+      "validations": [],
+      "style": {},
+      "actions": [],
+      "namespace": "personal_info",
+      "elements": [
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "title",
+          "metadata": {},
+          "validations": [],
+          "style": { "size": "xl4" },
+          "actions": [],
+          "widget": { "type": "Text" },
+          "content": "title.content"
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "subtitle",
+          "metadata": { "tip_content": "subtitle.tip_content" },
+          "validations": [],
+          "style": { "size": "md" },
+          "actions": [],
+          "widget": { "type": "Subtitle" },
+          "content": "subtitle.content"
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "name",
+          "metadata": { "display_only": true },
+          "style": {},
+          "actions": [],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "widget": {
+            "type": "Name",
+            "label": "name.label",
+            "title": "name.title",
+            "attributes": {
+              "read_only": true
+            }
+          }
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "date_of_birth",
+          "metadata": { "display_only": true },
+          "style": {},
+          "actions": [],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "widget": {
+            "type": "DatePicker",
+            "label": "date_of_birth.label",
+            "title": "date_of_birth.title",
+            "attributes": { "read_only": true }
+          }
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "ssn",
+          "metadata": { "display_only": true },
+          "validations": [],
+          "style": {},
+          "actions": [],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "widget": {
+            "type": "TextInput",
+            "label": "ssn.label",
+            "title": "tax_identification_number.title",
+            "attributes": { "read_only": true, "masked": true, "type": "tel", "format": "1111" },
+            "rules": [
+              {
+                "effect": "SHOW",
+                "condition": {
+                  "type": "expectedValue",
+                  "data_path": "#/tax_id_preference/value",
+                  "data": "ssn"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "itin",
+          "metadata": { "display_only": true },
+          "validations": [],
+          "style": {},
+          "actions": [],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "widget": {
+            "type": "TextInput",
+            "label": "itin.label",
+            "title": "tax_identification_number.title",
+            "attributes": { "read_only": true, "masked": true, "type": "tel", "format": "111-11-1111", "hidden": true },
+            "rules": [
+              {
+                "effect": "SHOW",
+                "condition": {
+                  "type": "expectedValue",
+                  "data_path": "#/tax_id_preference/value",
+                  "data": "itin"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "home_address",
+          "metadata": { "display_only": true },
+          "actions": [],
+          "entity_role": "PRIMARY_AUTHORIZED_USER",
+          "widget": {
+            "type": "Address",
+            "label": "home_address.label",
+            "title": "home_address.title",
+            "attributes": { "read_only": true }
+          }
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "submit",
+          "metadata": {},
+          "validations": [],
+          "style": { "size": "md" },
+          "actions": [{ "trigger": "SUBMIT", "effects": [{ "type": "ALERT", "arguments": ["test"] }] }],
+          "widget": {
+            "type": "Button",
+            "text": "submitButton.label",
+            "label": "submitButton.label",
+            "attributes": { "read_only": true }
+          }
+        },
+        {
+          "type": "VIEW_ELEMENT",
+          "name": "edit",
+          "metadata": {},
+          "validations": [],
+          "style": { "size": "md" },
+          "actions": [
+            { "effects": [{ "type": "ALERT", "arguments": ["test"] }], "transition_to": "name_and_dob_page" }
+          ],
+          "widget": {
+            "type": "Button",
+            "text": "editButton.label",
+            "label": "editButton.label",
+            "attributes": {
+              "type": "secondary",
+              "clickFpti": {
+                "link": "edit info"
+              },
+              "read_only": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

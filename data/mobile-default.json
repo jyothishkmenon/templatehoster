@@ -1,0 +1,338 @@
+{
+  "data": {
+    "dob_format": "MM/dd/yyyy",
+    "addresses": [
+      [
+        "7178102315506158055",
+        "2211 N 1st St 42776 73rd Avenue N San Jose CA"
+      ]
+    ],
+    "address_state_list": [
+      {
+        "stateName": "Alabama",
+        "stateCode": "AL",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Alaska",
+        "stateCode": "AK",
+        "objectType": "State"
+      },
+      {
+        "stateName": "American Samoa",
+        "stateCode": "AS",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Arizona",
+        "stateCode": "AZ",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Arkansas",
+        "stateCode": "AR",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Armed Forces Americas",
+        "stateCode": "AA",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Armed Forces Europe",
+        "stateCode": "AE",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Armed Forces Pacific",
+        "stateCode": "AP",
+        "objectType": "State"
+      },
+      {
+        "stateName": "California",
+        "stateCode": "CA",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Colorado",
+        "stateCode": "CO",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Connecticut",
+        "stateCode": "CT",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Delaware",
+        "stateCode": "DE",
+        "objectType": "State"
+      },
+      {
+        "stateName": "District of Columbia",
+        "stateCode": "DC",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Federated States of Micronesia",
+        "stateCode": "FM",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Florida",
+        "stateCode": "FL",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Georgia",
+        "stateCode": "GA",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Guam",
+        "stateCode": "GU",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Hawaii",
+        "stateCode": "HI",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Idaho",
+        "stateCode": "ID",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Illinois",
+        "stateCode": "IL",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Indiana",
+        "stateCode": "IN",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Iowa",
+        "stateCode": "IA",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Kansas",
+        "stateCode": "KS",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Kentucky",
+        "stateCode": "KY",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Louisiana",
+        "stateCode": "LA",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Maine",
+        "stateCode": "ME",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Marshall Islands",
+        "stateCode": "MH",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Maryland",
+        "stateCode": "MD",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Massachusetts",
+        "stateCode": "MA",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Michigan",
+        "stateCode": "MI",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Minnesota",
+        "stateCode": "MN",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Mississippi",
+        "stateCode": "MS",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Missouri",
+        "stateCode": "MO",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Montana",
+        "stateCode": "MT",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Nebraska",
+        "stateCode": "NE",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Nevada",
+        "stateCode": "NV",
+        "objectType": "State"
+      },
+      {
+        "stateName": "New Hampshire",
+        "stateCode": "NH",
+        "objectType": "State"
+      },
+      {
+        "stateName": "New Jersey",
+        "stateCode": "NJ",
+        "objectType": "State"
+      },
+      {
+        "stateName": "New Mexico",
+        "stateCode": "NM",
+        "objectType": "State"
+      },
+      {
+        "stateName": "New York",
+        "stateCode": "NY",
+        "objectType": "State"
+      },
+      {
+        "stateName": "North Carolina",
+        "stateCode": "NC",
+        "objectType": "State"
+      },
+      {
+        "stateName": "North Dakota",
+        "stateCode": "ND",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Northern Mariana Islands",
+        "stateCode": "MP",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Ohio",
+        "stateCode": "OH",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Oklahoma",
+        "stateCode": "OK",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Oregon",
+        "stateCode": "OR",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Palau",
+        "stateCode": "PW",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Pennsylvania",
+        "stateCode": "PA",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Puerto Rico",
+        "stateCode": "PR",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Rhode Island",
+        "stateCode": "RI",
+        "objectType": "State"
+      },
+      {
+        "stateName": "South Carolina",
+        "stateCode": "SC",
+        "objectType": "State"
+      },
+      {
+        "stateName": "South Dakota",
+        "stateCode": "SD",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Tennessee",
+        "stateCode": "TN",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Texas",
+        "stateCode": "TX",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Utah",
+        "stateCode": "UT",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Vermont",
+        "stateCode": "VT",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Virgin Islands",
+        "stateCode": "VI",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Virginia",
+        "stateCode": "VA",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Washington",
+        "stateCode": "WA",
+        "objectType": "State"
+      },
+      {
+        "stateName": "West Virginia",
+        "stateCode": "WV",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Wisconsin",
+        "stateCode": "WI",
+        "objectType": "State"
+      },
+      {
+        "stateName": "Wyoming",
+        "stateCode": "WY",
+        "objectType": "State"
+      }
+    ],
+    "date_of_birth": "01/01/1989",
+    "address_screen_type": "address_list_screen",
+    "7178102315506158055": {
+      "type": null,
+      "id": "7178102315506158055",
+      "line1": "2211 N 1st St",
+      "line2": "42776 73rd Avenue N",
+      "city": "San Jose",
+      "state": "CA",
+      "postal_code": "95131",
+      "country_code": "US"
+    },
+    "name": "1|||100|123456789 Jimbru Willie",
+    "tax_id_preference": "ssn",
+    "first_address_option": "7178102315506158055"
+  }
+}
